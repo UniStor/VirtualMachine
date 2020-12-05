@@ -5,4 +5,5 @@
     thinpool: '{{this.pool}}'
     lv: '{{vm.this}}'
     size: '{{vm.size}}'
+    shrink: '{{shrinkable}}'
   become: true
