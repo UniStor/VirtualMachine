@@ -4,5 +4,5 @@
     vg: '{{this.vg}}'
     thinpool: '{{this.pool}}'
     lv: '{{vm.this}}'
-    size: 50g
+    size: '{{vm.size}}'
   become: true
