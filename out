@@ -1,0 +1,19 @@
+<pool type='dir'>
+  <name>img</name>
+  <uuid>fa103ed8-cba0-4321-9be5-0e27087ef751</uuid>
+  <capacity unit='bytes'>30383517696</capacity>
+  <allocation unit='bytes'>1946439680</allocation>
+  <available unit='bytes'>28437078016</available>
+  <source>
+  </source>
+  <target>
+    <path>/home/me/.uni/hyperion/img</path>
+    <permissions>
+      <mode>0755</mode>
+      <owner>1000</owner>
+      <group>1000</group>
+      <label>unconfined_u:object_r:user_home_t:s0</label>
+    </permissions>
+  </target>
+</pool>
+

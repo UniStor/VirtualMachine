@@ -1,0 +1,4 @@
+---
+hyperion:
+  pool_dir: ['img', 'iso']
+  artifact_dir: ['tor', 'tmp']

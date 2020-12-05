@@ -1,0 +1,20 @@
+---
+- name: Create directories for Hyperion
+  file:
+    path: '/home/{{ansible_user}}/.uni/hyperion/{{item}}'
+    state: directory
+  loop: '{{ hyperion.pool_dir | union( hyperion.artifact_dir ) }}'
+
+- name: Create a pool
+  shell: 'virsh pool-define-as --name {{item}} --type dir --target /home/{{ansible_user}}/.uni/hyperion/{{item}}'
+  args:
+    creates: '/etc/libvirt/storage/{{item}}.xml'
+  loop: '{{hyperion.pool_dir}}'
+  become: true
+
+- name: Activate a pool
+  shell: 'virsh pool-autostart {{item}}'
+  args:
+    creates: '/etc/libvirt/storage/autostart/{{item}}.xml'
+  loop: '{{hyperion.pool_dir}}'
+  become: true
