@@ -1,0 +1,4 @@
+---
+
+- name: Include vars based on OS Distro
+  include_vars: '{{ansible_distribution}}'

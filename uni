@@ -1,0 +1,7 @@
+---
+- hosts: local
+  roles:
+  - role: this
+
+  - role: Create
+    tags: c

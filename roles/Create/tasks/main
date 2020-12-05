@@ -1,0 +1,8 @@
+---
+- name: Create volume per device
+  lvol:
+    vg: '{{this.vg}}'
+    thinpool: '{{this.pool}}'
+    lv: '{{vm.this}}'
+    size: 50g
+  become: true
